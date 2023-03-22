@@ -25,18 +25,22 @@ function myFunction() {
     let prezzoTotale = tariffa * chilometri;
 
     // sconto del 20%
-    if (eta < 18) {
+    if ( eta < 18 ) {
+
         prezzoTotale = prezzoTotale * 0.2;
-    }
 
     // sconto del 40%
-    if (eta > 65) {
+    } else if ( eta > 65 ) {
+
         prezzoTotale = prezzoTotale * 0.4;
+
+    } else { 
+        prezzoTotale = prezzoTotale;
     }
 
-    document.getElementById("prezzoFinale").innerHTML = "Il prezzo del biglietto è: " + prezzoTotale.toFixed(2);
+    // Inserimento dei dati nell'output
+    document.getElementById("prezzoFinale").innerHTML = "Il prezzo del biglietto è: " + prezzoTotale.toFixed(2) + "&#8364;";
 
     console.log(prezzoTotale);
 
-    console.log("ciao");
 }
