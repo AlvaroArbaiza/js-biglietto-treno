@@ -44,3 +44,10 @@ function myFunction() {
     console.log(prezzoTotale);
 
 }
+
+/* 
+    preventDefault() per evitare il caricamento della pagina ogni volta che si chiama la funzione myFunction()
+*/
+document.getElementById("button-form").addEventListener("click", function(event){
+        event.preventDefault()
+    });
