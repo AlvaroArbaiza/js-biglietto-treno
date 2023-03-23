@@ -13,10 +13,10 @@
 function myFunction() { 
 
     // chilometri
-    let chilometri = document.getElementById("chilometri").value;
+    let chilometri = parseFloat( document.getElementById("chilometri").value );
 
     // età
-    let eta = document.getElementById("eta").value;
+    let eta = parseInt( document.getElementById("eta").value );
 
     // tariffa in base al numero di chilometri
     const tariffa = 0.21;
@@ -27,12 +27,12 @@ function myFunction() {
     // sconto del 20%
     if ( eta < 18 ) {
 
-        prezzoTotale = prezzoTotale * 0.2;
+        prezzoTotale = prezzoTotale * 0.8;
 
     // sconto del 40%
     } else if ( eta > 65 ) {
 
-        prezzoTotale = prezzoTotale * 0.4;
+        prezzoTotale = prezzoTotale * 0.6;
 
     } else { 
         prezzoTotale = prezzoTotale;
